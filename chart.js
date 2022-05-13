@@ -1,11 +1,11 @@
-export const makeChart = () => {
+// export const makeChart = 
   const myChartElement = document.getElementById("covidChart").getContext("2d");
-  Chart.defaults.global.defaultFontSize = 18;
-  Chart.defaults.global.defaultFontFamily = "Lato";
-  Chart.defaults.global.defaultFontColor = "#777";
-  const covidChart = new Chart(myChartElement, config);
+//   Chart.defaults.global.defaultFontSize = 18;
+//   Chart.defaults.global.defaultFontFamily = "Lato";
+//   Chart.defaults.global.defaultFontColor = "#777";
 
-  const labels = ["January", "February", "March", "April", "May", "June"];
+
+const labels = ["January", "February", "March", "April", "May", "June"];
 
   const data = {
     labels: labels,
@@ -14,7 +14,7 @@ export const makeChart = () => {
         label: "Cases",
         backgroundColor: "rgb(255, 99, 132)",
         // backgroundColor: ["green","pink","purple"],
-        borderColor: "rgb(255, 99, 132)",
+        borderColor: "blue",
         borderWidth: 1,
         hoverBorderWidth: 3,
         hoverBorderColor: "#000",
@@ -23,7 +23,7 @@ export const makeChart = () => {
     ],
   };
 
-  const config = {
+   const config = {
     type: "line",
     data: data,
     options: {
@@ -41,6 +41,7 @@ export const makeChart = () => {
       },
     },
   };
-};
+  const covidChart = new Chart(myChartElement, config);
+// ;
 
-makeChart();
+// makeChart();
