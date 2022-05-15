@@ -12,7 +12,10 @@
 
 <body>
     <div id="container">
-        <h1>COVID-19 Dashboard</h1>
+        <header>
+
+            <h1>COVID-19 Dashboard</h1>
+        </header>
         <div class="continents">
             <button id="america">America</button>
             <button id="europe">Europe</button>
@@ -22,24 +25,22 @@
             <button id="world">World</button>
         </div>
         <div class="clinicalStatus">
-            <button id="Confirmed">Confirmed</button>
-            <button id="Deaths">Deaths</button>
-            <button id="Recovered">Recovered</button>
-            <button id="Critical">Critical</button>
+            <button class='status' id="Confirmed">Confirmed</button>
+            <button class='status' id="Deaths">Deaths</button>
+            <button class='status' id="Recovered">Recovered</button>
+            <button class='status' id="Critical">Critical</button>
         </div>
         <div>
             <label for="country">Country</label>
-            <select name="option" id="country">
-                <option value="everything">everything</option>
+            <select name="country" id="countrySelection">
+                <option value="everything" disabled selected>Select Country</option>
                 <option value="Id">id</option>
             </select>
         </div>
-        <div id="countryStatistics">
-            
-        </div>
+        <canvas id="countryStatistics"></canvas>
         <canvas id="covidChart"></canvas>
     </div>
-    <script src="chart.js" defer type="module"></script>
+    <script src="pagePaint.js" defer type="module"></script>
 </body>
 
 </html>

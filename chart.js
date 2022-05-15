@@ -1,29 +1,33 @@
-// export const makeChart = 
+let generalChart = null;
+export const makeChart = (x, y) => {
+  if (generalChart && generalChart != null) {
+    generalChart.destroy();
+  }
+
   const myChartElement = document.getElementById("covidChart").getContext("2d");
-//   Chart.defaults.global.defaultFontSize = 18;
-//   Chart.defaults.global.defaultFontFamily = "Lato";
-//   Chart.defaults.global.defaultFontColor = "#777";
 
-
-const labels = ["January", "February", "March", "April", "May", "June"];
+  const labels = x;
+  // .map((country) => {
+  //   return country.name;
+  // });
+  const yAxis = y.map((country) => country.newConfirmed);
 
   const data = {
     labels: labels,
     datasets: [
       {
         label: "Cases",
-        backgroundColor: "rgb(255, 99, 132)",
-        // backgroundColor: ["green","pink","purple"],
+        backgroundColor: "rgb(129, 132, 222)",
         borderColor: "blue",
         borderWidth: 1,
         hoverBorderWidth: 3,
         hoverBorderColor: "#000",
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: yAxis,
+        fill: true,
       },
     ],
   };
-
-   const config = {
+  const config = {
     type: "line",
     data: data,
     options: {
@@ -31,6 +35,7 @@ const labels = ["January", "February", "March", "April", "May", "June"];
         display: true,
         text: "Covid-19 cases per country",
         fontSize: 25,
+        // fontColor: "black"
       },
       legend: {
         display: true,
@@ -41,7 +46,6 @@ const labels = ["January", "February", "March", "April", "May", "June"];
       },
     },
   };
-  const covidChart = new Chart(myChartElement, config);
-// ;
 
-// makeChart();
+  generalChart = new Chart(myChartElement, config);
+};

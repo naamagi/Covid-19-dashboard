@@ -1,12 +1,8 @@
-
-
-
 html, body {
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 0;
-
 }
 
 #container {
@@ -17,41 +13,56 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    align-content: center;
+    background-color: rgb(252, 247, 239);
+    overflow: auto;
 }
-.continents{
+header{
+    width:100%;
+    margin-top: 10%;
+}
+.continents {
     display: flex;
     justify-content: center;
 }
-.continents>button,.clinicalStatus>button,select{
-    margin:0.5vw;
-    padding:0.5vw;
-    background-color:antiquewhite;
-    border: 1px solid #000;
-}
-.clinicalStatus>button{
-    background-color:rgb(218, 206, 190);
-}
-select{
-    background-color:rgb(184, 175, 164);
-}
-.countries>button:hover,.clinicalStatus>button:hover{
-cursor:pointer;
-}
-#covidChart {
-    width: 30%;
-    height: 10%;
-    margin: 0 10vw;
 
-   margin-bottom:15%;
+.continents>button, .clinicalStatus>button, select {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: antiquewhite;
+    border: 1px solid #000;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.clinicalStatus>button {
+    background-color: rgb(218, 206, 190);
+}
+
+select {
+    background-color: rgb(184, 175, 164);
+}
+
+.countries>button:hover, .clinicalStatus>button:hover, .continents>button:hover {
+    cursor: pointer;
+}
+
+#covidChart, #countryStatistics{
+    width: 50%;
+    height: 50%;
+    margin: 0 10rem;
+
+    margin-bottom: 15%;
 }
 
 h1 {
-    width : 100%;
-    height:30%;
+    width: 100%;
+    height: 30%;
     text-align: center;
-    margin-top:15%;
+    margin-top: 10rem;
 }
-label{
+
+label {
     display: inline;
 }
