@@ -21,6 +21,8 @@ export const initializePage = async () => {
       .map((country) => Object.values(country));
   };
   const asiaCountriesNames = getCountriesOfContinent("asia");
+  console.log(asiaCountriesNames);
+
   const americaCountriesNames = getCountriesOfContinent("america");
   console.log(americaCountriesNames);
   const europeCountriesNames = getCountriesOfContinent("europe");
